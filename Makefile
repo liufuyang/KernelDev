@@ -25,3 +25,4 @@ echo Cleaning up object files...
 #rm *.o
 echo Done!
 #this is a bad script
+#this is a stupid comment
