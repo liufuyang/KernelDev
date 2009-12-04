@@ -24,4 +24,4 @@ ld -T link.ld -o kernel.bin start.o main.o scrn.o gdt.o idt.o isrs.o irq.o timer
 echo Cleaning up object files...
 #rm *.o
 echo Done!
-
+# neet to add a make file
