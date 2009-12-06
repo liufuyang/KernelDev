@@ -48,20 +48,25 @@ void outportb (unsigned short _port, unsigned char _data)
 
 void cmain()
 {
-    int i;
+    //int i;
 
-    gdt_install();
-    idt_install();
-    isrs_install();
-    irq_install();
+    //gdt_install();
+    //idt_install();
+    //isrs_install();
+    //irq_install();
     init_video();
-    timer_install();
-    keyboard_install();
+    //timer_install();
+    //keyboard_install();
 
-    __asm__ __volatile__ ("sti");
-
-    puts("Hello World!\n");
-	puts("Hi, This is Freddy's costomer kernel!");
+    //__asm__ __volatile__ ("sti");
+	unsigned char* welcome[] = {
+		"Hello World!\n",
+		"Hi, This is Freddy's costomer kernel!\n"
+	};
+	puts(*welcome);
+	puts(*(welcome+1));
+    //puts("Hello World!\n");
+	//puts("Hi, This is Freddy's costomer kernel!\n");
 //    i = 10 / 0;
 //    putch(i);
 
